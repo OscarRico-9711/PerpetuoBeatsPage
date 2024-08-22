@@ -1,0 +1,185 @@
+:root {
+
+    --blanco: rgb(240, 248, 255);
+    --vinotinto: rgba(165, 42, 42, 0.5);
+}
+
+html {
+    box-sizing: border-box;
+
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 16px;
+    /* 1 rem = 16px */
+    font-family:  Verdana, Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+    color: rgb(240, 248, 255);
+}
+
+a {
+    color: rgb(140, 140, 140);
+    text-decoration: none;
+    transition: letter-spacing 0.5s ease-out;
+    /* Transición suave para el efecto */
+
+}
+
+a:hover {
+    letter-spacing: 0.3em;
+    /* Ajusta el espacio entre letras */
+    font-weight: bold;
+}
+
+.logoImg {
+    width: 34px;
+    height: 34px;
+    fill: rgba(165, 42, 42);
+    transition: fill 0.3s ease;
+    /* Transición suave para el cambio de color */
+}
+
+.options {
+    position: fixed;
+    /* Fija el nav en la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Ocupa todo el ancho de la pantalla */
+    text-decoration: none;
+    height: 3.5rem;
+    transition: height 5s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 1rem;
+    /* Espacio interno */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    /* Opcional: Sombra para mejor visibilidad */
+    z-index: 1000;
+    border-bottom: 1px solid rgba(143, 143, 143, 0.9);
+    transition: height 0.4s ease-out, border-bottom 0.4s ease-out;
+    /* Transición lenta para altura y borde */
+}
+
+.options:hover {
+
+    background-color: rgba(165, 42, 42, 0.5);
+    border-bottom: 1px rgba(165, 42, 42, 0.5);
+    height: 6rem;
+    transition: height 0.3s ease-in, border-bottom 0.4s ease-in;
+    /* Transición rápida para contracción menu */
+}
+
+.options:hover a {
+    color: aliceblue;
+    visibility: visible;
+}
+
+.logoImg {
+    visibility: visible;
+}
+
+.options:hover .logoImg path {
+    fill: var(--blanco);
+    /*CAMBIAR COLOR DE ICONO CUANDO SE HACE HOVER EN EL MENU*/
+}
+
+.banner {
+
+    background-image: url(../img/producer.jpg);
+    background-size: 60%;
+    background-repeat: repeat-x;
+    background-position: center right;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative; /* Necesario para que el shadow se posicione relativo a este contenedor */
+}
+
+.shadow {
+    position: relative;
+    height: 60%;
+
+    /* Ajusta el alto del contenedor */
+}
+
+.shadow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgb(0, 0, 0) 35%, rgba(0, 0, 0, 0.5) 45%, transparent 100%);
+    /* Degradado de negro a transparente de derecha a izquierda */
+    pointer-events: none;
+    /* Evita interferencias con el contenido */
+    z-index: 1; /* Asegura que el degradado esté por encima del div.shadow */
+}
+
+.banner * {
+    position: relative;
+    z-index: 2;
+    /* Asegura que el contenido del banner esté por encima del degradado */
+}
+
+
+.logoBanner {
+    width: 18rem;
+    height: 18rem;
+    max-width: 100%;
+    /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto;
+
+}
+
+.titulobanner {
+
+    font-size: 50px;
+    color: rgba(165, 42, 42, 0.8);
+}
+
+.subtitlebanner {
+    font-size: 25px;
+}
+
+.textobanner {
+
+    font-family: 'Mr Dafoe';
+}
+
+.footer {
+
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: rgba(165, 42, 42, 0.5);
+    height: 100px;
+     z-index: 1000;
+}
+
+
+
+@media (max-width: 1542px) {
+
+    .banner {  
+            background-size: cover;
+    }
+}
