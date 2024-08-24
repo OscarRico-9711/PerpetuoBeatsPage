@@ -2,21 +2,60 @@
 
 
 
-  <main>
-    <section class="about" id="about">
-        <div class="shadow2">
-            <div class="aboutcontend">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima neque consectetur
-                    odio? Natus odio cum deleniti illum. Et aliquid, laudantium assumenda natus optio rem reiciendis,
-                    expedita est iste modi ad?</p>
+
+    <section class="contact" id="about"> <!-- FOTO">  -->
+        <div class="shadowContact"> <!-- sombra ">  -->
+            <div class="left">
+
+                <h1>CONTACT</h1>
+                <h2>If you have any questions or comments, click the button below.</h2>
+                
+
             </div>
-            
+            <div class="right">
+                <div class="contenedorcontact">
+
+                    <form class="formulario" action="#" name="form1" id="form1" method="post">
+
+                        <div class="contenedor-campos">
+
+                            <div class="campo">
+                                <input class="input-text" type="text" placeholder="Nombre" name="nombre" id="nombre">
+                            </div>
+
+                            <div class="campo">
+                                <input class="input-text" type="tel" placeholder="Teléfono" name="telefono"
+                                    id="telefono">
+                            </div>
+
+                            <div class="campo">
+                                <textarea class="input-text" name="mensaje" id="mensaje"
+                                    placeholder="Mensaje"></textarea>
+                            </div>
+
+
+                            <div class="contenedorBtn">
+                                <input class="boton enviar" type="submit" value="Message me" id="submit_contactar"
+                                    name="submit_contactar">
+
+
+                            </div>
+
+
+                        </div> <!--cierre div campos-->
+                    </form>
+
+                    <a class="no-style" href="/">CANCEL</a>
+                </div> <!-- contenedor formulario -->
+
+
+            </div>
         </div>
     </section>
-  </main>
 
 
 
 
 
-<%- include('template/footer'); %>
+
+    <%- include('template/footer'); %>

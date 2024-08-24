@@ -5,5 +5,15 @@
   },
   "devDependencies": {
     "nodemon": "^3.1.4"
-  }
+  },
+  "name": "y",
+  "version": "1.0.0",
+  "description": "Perpetuo Beats Landing",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app"
+  },
+  "author": "Oscar Rico",
+  "license": "ISC"
 }

@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
 })
 
 //ROUTER PARA INDEX
-app.get('/contact/', (req, res) => {
+app.get('/contact', (req, res) => {
   res.render('contact');
 })
 
