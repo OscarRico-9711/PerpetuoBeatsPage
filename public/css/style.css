@@ -261,6 +261,23 @@ a:hover {
     }
 }
 
+.error404,
+h1,h3{
+
+    color: black;
+
+}
+
+.error404,h3{
+
+    margin-bottom: 20px;
+}
+
+.error404{
+
+    padding: 20px;
+}
+
 @media (max-width: 1530px) {
 
     .banner {  
