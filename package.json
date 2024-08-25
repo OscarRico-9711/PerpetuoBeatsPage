@@ -4,7 +4,9 @@
     "express": "^4.19.2"
   },
   "devDependencies": {
-    "nodemon": "^3.1.4"
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.4",
+    "opn-cli": "^5.0.0"
   },
   "name": "y",
   "version": "1.0.0",
@@ -12,7 +14,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon app"
+    "dev": "concurrently \"nodemon app\" \"npx opn-cli http://localhost:3000\""
   },
   "author": "Oscar Rico",
   "license": "ISC"

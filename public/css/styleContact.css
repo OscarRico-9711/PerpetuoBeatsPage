@@ -3,10 +3,27 @@
     font-weight: normal;
 }
 
-h1{
+h1 {
 
-    color: rgb(152, 67, 67);
+    color: rgb(157, 52, 52);
+    opacity:80%;
+
 }
+
+.contenedor-campos h3 {
+    color: rgb(167, 167, 167);
+}
+
+.contenedor-campos .title-error{
+    color: #cf3030;
+
+}
+
+.left p {
+    margin-top: 1rem;
+    color: rgb(167, 167, 167);
+}
+
 
 .shadowContact a {
 
@@ -27,31 +44,29 @@ h1{
     width: 100%;
     height: 100%;
     display: flex;
-   backdrop-filter: blur(10px);  
-    
+    backdrop-filter: blur(8px);
+
 }
 
-
-
-
 .left {
-    width: 50%;
+    width: 60%;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 2rem;
-    padding-left: 5rem;
-    
+
+
+
 }
 
+
 .right {
-    width: 50%;
+    width: 40%;
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    padding-left: 5rem;
     flex-direction: column;
 }
 
@@ -59,7 +74,7 @@ h1{
     background-image: url(../img/piano.png);
     background-size: cover;
     background-repeat: repeat-x;
-    background-position: bottom ;
+    background-position: bottom;
     height: 100vh;
     display: grid;
     /*grid-template-columns: 1fr 1fr;*/
@@ -93,17 +108,27 @@ h1{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
     /* Inicialmente invisible y desplazado hacia la izquierda */
     opacity: 0;
     transform: translateX(-100%) scale(0.5);
     /* Inicialmente más pequeño y fuera de la pantalla */
     animation: slideFromLeft 0.5s ease-in forwards;
-    
+    gap: 1rem;
+
+
 }
 
-.formulario {
-    width: 80%;
+.contenedor-campos {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#message {
+    resize: none;
 }
 
 
@@ -115,5 +140,51 @@ h1{
 }
 
 .input-text:focus {
+    outline: none;
+}
+
+.input-text::placeholder {
+    color: rgb(167, 167, 167);
+
+}
+
+
+
+.btnSend {
+    background-color: #000000;
+    color: var(--blanco);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    width: 100%;
+    height: 3rem;
+    border: none;
+    transition: background-color 0.1s ease-in-out;
+    /* Transición de 0.5s para el color y el borde */
+}
+
+.btnSend:hover {
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    border: #000000 solid 1px;
+
+}
+
+/*validaciones form*/
+
+.input-text-error {
+    border: none;
+    border-bottom: 2px solid #cf3030;
+    padding: 1rem;
+    width: 100%;
+    color: #cf3030;
+}
+
+.input-text-error::placeholder {
+    color: #cf3030;
+    opacity: 1;
+    /* Asegura que el color se vea bien */
+}
+
+.input-text-error:focus {
     outline: none;
 }

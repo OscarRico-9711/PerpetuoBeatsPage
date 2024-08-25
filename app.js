@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
   res.render('index');
 })
 
-//ROUTER PARA INDEX
+//ROUTER PARA CONTACT
 app.get('/contact', (req, res) => {
   res.render('contact');
 })
@@ -26,8 +26,6 @@ app.use((req, res, next) => {
     description: 'Page not found'
   })
 })
-
-
 
 //ESCUCHA DEL SERVIDOR EXPRESS - IR AL FINAL
 app.listen(port, () => {
