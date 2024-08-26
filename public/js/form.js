@@ -28,8 +28,7 @@ const validateForm = (e) => {
 
     switch (e.target.name) {
         case "name":
-            fieldvalidation(expresiones.name, e.target, 'name', 'add a correct value');
-
+            fieldvalidation(expresiones.name, e.target, 'name', 'add a correct value');            
             break;
 
         case "phone":
@@ -79,7 +78,7 @@ form.addEventListener("submit", (e) => {
     // Validar todos los campos manualmente con las expresiones correctas
     fieldvalidation(expresiones.name, document.getElementById('name'), 'name', 'add a correct value');
     fieldvalidation(expresiones.phone, document.getElementById('phone'), 'phone', 'add a correct number');
-    fieldvalidation(expresiones.message, document.getElementById('message'), 'message', 'add a correct message');
+    fieldvalidation(expresiones.message, document.getElementById('message'), 'message', 'add a message');
 
 
     if (ValidFields.name && ValidFields.phone && ValidFields.message) {
@@ -110,26 +109,4 @@ form.addEventListener("submit", (e) => {
 
 });
 
-// document.getElementById('form').addEventListener('submit', function(e) {
-//     e.preventDefault(); // Evita que el formulario se envíe de manera predeterminada
 
-//     // Recoger datos del formulario
-//     const name = document.getElementById('nombre').value;
-//     const phone = document.getElementById('phone').value;
-//     const message = document.getElementById('message').value;
-
-//     // Formatear el mensaje para WhatsApp
-//     const formattedMessage = `Hola, soy ${name}, mi número es ${phone}. ${message}`;
-
-//     // Codificar el mensaje para que se envíe correctamente en la URL
-//     const encodedMessage = encodeURIComponent(formattedMessage);
-
-//     // Número de teléfono (formato internacional)
-//     const phoneNumber = "573219145165"; // Cambia este número por el que necesites
-
-//     // Crear la URL de WhatsApp con el número y el mensaje
-//     const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
-
-//     // Abrir WhatsApp Web en una nueva pestaña
-//     window.open(whatsappUrl, '_blank');
-// });

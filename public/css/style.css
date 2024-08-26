@@ -97,7 +97,7 @@ a:hover {
     visibility: visible;
 }
 
-.options:hover + main {
+.options:hover+main {
     filter: blur(5px);
     /* Aplica blur a todo el contenido dentro del main */
 }
@@ -148,15 +148,13 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-
 }
 
 
 
 .shadow2 {
     position: absolute;
-    background: linear-gradient(to left, rgb(0, 0, 0) 40%, rgba(0, 0, 0, 0.5) 55%, transparent 100%);
+    background: linear-gradient(to left, rgb(0, 0, 0) 20%, rgba(0, 0, 0, 0.5) 65%, transparent 100%);
     top: 0px;
     left: 0px;
     right: 0px;
@@ -167,10 +165,11 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    backdrop-filter: blur(5px);
 
 }
 
-.about {
+.beats {
     background-image: url(../img/producer2.jpeg);
     background-size: 60%;
     background-repeat: repeat-x;
@@ -183,11 +182,55 @@ main {
     justify-content: center;
 }
 
+.beats-description {
+
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.beats-description p {
+    color: rgb(218, 218, 218);
+    font-weight: bold;
+}
+
+.beats-description p a {
+    letter-spacing: 0em;
+    color: #e73b07;
+}
+
+.beats-description p a:hover {
+    letter-spacing: 0em;
+    color: #e06f4d;
+}
+
+.aboutcontend {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+}
+
+
+.beats-frame {
+    gap: 1rem;
+}
+
+
+.frame {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
 .logoBanner {
     width: 15rem;
     height: 15rem;
-    max-width: 100%;
-    /* Asegura que la imagen no exceda el ancho del contenedor */
+    max-width: 100%;    
     height: auto;
     opacity: 100%;
     transition: 0.5s;
@@ -250,6 +293,26 @@ main {
     z-index: 1000;
 }
 
+
+.whatsappIcon {
+    animation: arrowBounceicon 1s ease-in infinite;
+}
+
+/* Definición de la animación */
+@keyframes arrowBounceicon {
+    0% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(-0.2rem);
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(0.1rem);
+    }
+}
+
 .arrow {
     width: 12rem;
     position: fixed;
@@ -308,7 +371,7 @@ h3 {
 
     }
 
-    .about {
+    .beats {
         background-size: cover;
         background-repeat: no-repeat;
 
