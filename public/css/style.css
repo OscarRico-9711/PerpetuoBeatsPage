@@ -133,8 +133,6 @@ main {
     justify-content: center;
 }
 
-
-
 .banner {
     background-image: url(../img/producer.jpg);
     background-size: 60%;
@@ -149,8 +147,6 @@ main {
     align-items: center;
     justify-content: center;
 }
-
-
 
 .shadow2 {
     position: absolute;
@@ -211,7 +207,6 @@ main {
     height: 100%;
 
 }
-
 
 .beats-frame {
     gap: 1rem;

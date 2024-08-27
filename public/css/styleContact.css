@@ -4,10 +4,8 @@
 }
 
 h1 {
-
     color: rgb(157, 52, 52);
     opacity:80%;
-
 }
 
 .contenedor-campos h3 {
@@ -16,21 +14,17 @@ h1 {
 
 .contenedor-campos .title-error{
     color: #cf3030;
-
 }
 
 .left p {
     margin-top: 1rem;
-    color: rgb(167, 167, 167);
-    
+    color: rgb(167, 167, 167);    
 }
 
 
 .shadowContact a {
-
     font-size: 15px;
     text-decoration: underline;
-
     color: var(--blanco);
     color: #000000;
 }
@@ -76,10 +70,7 @@ h1 {
     background-position: bottom;
     height: 100vh;
     display: grid;
-    /*grid-template-columns: 1fr 1fr;*/
-    /* Dos columnas iguales */
     height: 100vh;
-    /* Ocupa toda la altura de la pantalla */
     width: 100%;
 
 }
@@ -147,8 +138,6 @@ h1 {
 
 }
 
-
-
 .btnSend {
     background-color: #000000;
     color: var(--blanco);
@@ -165,7 +154,6 @@ h1 {
     background-color: rgb(255, 255, 255);
     color: #000000;
     border: #000000 solid 1px;
-
 }
 
 /*validaciones form*/
