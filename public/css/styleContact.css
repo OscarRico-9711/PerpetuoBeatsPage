@@ -188,7 +188,6 @@ h1 {
        
         flex-direction: column;
         height: 100vh;
-        border: rgb(58, 40, 195) solid;
         justify-content: space-around;
           
     }
@@ -198,7 +197,7 @@ h1 {
    
         padding-left: 0rem;
         gap: 1rem;
-        border: red solid;
+   
         margin-top: 5rem;
         justify-items: center;
         padding: 1rem;
@@ -223,7 +222,7 @@ h1 {
 
         padding-right: 0;
         padding-bottom: 2.5rem;
-        border: rgb(41, 205, 90) solid;
+  
        
     }
 
