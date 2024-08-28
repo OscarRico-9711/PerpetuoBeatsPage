@@ -27,6 +27,7 @@ body {
     margin-top: 0;
     margin-top: 1rem;
     margin-bottom: 1rem;
+
 }
 
 h1,
@@ -161,7 +162,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(3px);
 
 }
 
@@ -220,6 +221,13 @@ main {
     justify-content: center;
     flex-direction: column;
     gap: 1rem;
+}
+
+.soundcloud-iframe {
+    width: 100%;
+    height: 500px;
+    border: none; /* Esto equivale a frameborder="no" */
+    overflow: hidden; /* Esto equivale a scrolling="no" */
 }
 
 .logoBanner {
@@ -283,7 +291,6 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    color: rgba(165, 42, 42, 0.5);
     height: 100px;
     z-index: 1000;
 }
@@ -383,5 +390,65 @@ h3 {
         width: 12rem;
         height: 12rem;
         transition: height 0.9s ease, width 0.9s ease;
+    }
+}
+
+/*MOBILE*/
+
+@media (max-width: 481px) {
+    .shadow {
+        background: linear-gradient(to right, rgb(0, 0, 0) 5%, rgba(0, 0, 0, 0.2) 15%, transparent 100%);
+    }
+
+    .shadow2 {
+        background: linear-gradient(to left, rgb(0, 0, 0) 4%, rgba(0, 0, 0, 0.2) 15%, transparent 100%);
+        background-repeat: inherit;
+    }
+
+    .shadow h2{
+        font-size: 2.3rem;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    
+
+    .shadow p{
+        font-size: 20px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    .logoBanner {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .banner {
+        height: 95vh;
+    }
+
+    .soundcloud-iframe {
+        height: 400px;
+        width: 80%;
+    }
+
+    .options {
+        
+        background-color: rgba(0, 0, 0);
+    }
+
+    .options:hover {
+        height: 3.5rem;
+        background-color: rgba(144, 50, 50, 0.7);
+    }
+
+    .options:hover+main {
+        filter: none;
+        /* Aplica blur a todo el contenido dentro del main */
+    }
+
+    .footer {
+        display: flex;
+        height: 50px;
+        flex-direction: column;            
     }
 }

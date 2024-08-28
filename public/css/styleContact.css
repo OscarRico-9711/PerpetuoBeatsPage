@@ -1,3 +1,14 @@
+.contact {
+    background-image: url(../img/piano.png);
+    background-size: cover;
+    background-repeat: repeat-x;
+    background-position: bottom;
+    height: 100vh;
+    display: grid;
+    width: 100%;
+
+}
+
 .shadowContact a:hover {
     letter-spacing: 0em;
     font-weight: normal;
@@ -16,10 +27,12 @@ h1 {
     color: #cf3030;
 }
 
-.left p {
-    margin-top: 1rem;
+.shadowContact p {
+
     color: rgb(167, 167, 167);    
 }
+
+
 
 
 .shadowContact a {
@@ -39,41 +52,31 @@ h1 {
     width: 100%;
     height: 100%;
     display: flex;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(7px);
+    justify-content: space-between;
+
+}
+
+.left, .right{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 
 }
 
 .left {
-    width: 60%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding-left: 1.5rem;
+   
+    padding-left: 8rem;
+    gap: 1rem;
 }
 
 
 .right {
-    width: 40%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    padding-left: 5rem;
-    flex-direction: column;
+    padding-right: 15rem;   
 }
 
-.contact {
-    background-image: url(../img/piano.png);
-    background-size: cover;
-    background-repeat: repeat-x;
-    background-position: bottom;
-    height: 100vh;
-    display: grid;
-    height: 100vh;
-    width: 100%;
-
-}
 
 @keyframes slideFromLeft {
     0% {
@@ -114,6 +117,7 @@ h1 {
     gap: 1rem;
     justify-content: center;
     align-items: center;
+
 }
 
 
@@ -124,9 +128,9 @@ h1 {
 
 .input-text {
     border: none;
-    border-bottom: 2px solid #000000;
-    padding: 1rem;
+    border-bottom: 1px solid #000000;
     width: 100%;
+    padding: 1rem;
 }
 
 .input-text:focus {
@@ -160,7 +164,7 @@ h1 {
 
 .input-text-error {
     border: none;
-    border-bottom: 2px solid #cf3030;
+    border-bottom: 1px solid #cf3030;
     padding: 1rem;
     width: 100%;
     color: #cf3030;
@@ -174,4 +178,81 @@ h1 {
 
 .input-text-error:focus {
     outline: none;
+}
+
+/*MOBILE*/
+
+@media (max-width: 481px) {
+
+    .shadowContact {
+       
+        flex-direction: column;
+        height: 100vh;
+        border: rgb(58, 40, 195) solid;
+        justify-content: space-around;
+          
+    }
+
+  
+    .left {
+   
+        padding-left: 0rem;
+        gap: 1rem;
+        border: red solid;
+        margin-top: 5rem;
+        justify-items: center;
+        padding: 1rem;
+    
+    
+    }
+
+    .left h1 {
+        font-size: 1.2rem ;    
+     }
+
+    .left h2 {
+   
+       font-size: 12px ;
+       color: rgb(211, 211, 211);
+    
+    
+    }
+    
+    
+    .right {
+
+        padding-right: 0;
+        padding-bottom: 2.5rem;
+        border: rgb(41, 205, 90) solid;
+       
+    }
+
+    .contenedorcontact {
+        width: 85%;
+        height: 25rem;
+        border-radius: 2rem;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* Inicialmente invisible y desplazado hacia la izquierda */
+        opacity: 0;
+        transform: translateX(-100%) scale(0.5);
+        /* Inicialmente más pequeño y fuera de la pantalla */
+        animation: slideFromLeft 0.5s ease-in forwards;
+        box-sizing: border-box;    
+    }
+
+    .contenedor-campos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+   
+
+
+
 }
